@@ -1,4 +1,72 @@
-button {
-  font-size: 60px;
-  color: red;
+/* Button.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.button-container {
+  padding: 0.5rem 1rem;
+  height: auto;
+  font-size: clamp(0.6rem, calc(0.6rem + 1vmin), 1rem);
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #6a5acd; /* Replace with the actual color value */
+  box-shadow: 0px 0px 1px #800080; /* Replace with the actual color value */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button-container:hover {
+  box-shadow: unset;
+  transition: background-color 0.4s, box-shadow 0.4s;
+}
+
+.button-container:active {
+  transform: scale(0.95);
+}
+
+.primary-btn {
+  background-color: #6a5acd; /* Replace with the actual color value */
+  color: #ffffff; /* Replace with the actual color value */
+}
+
+.primary-btn:hover {
+  background-color: #800080; /* Replace with the actual color value */
+}
+
+.secondary-btn {
+  background-color: #ffffff; /* Replace with the actual color value */
+  color: #6a5acd; /* Replace with the actual color value */
+}
+
+.secondary-btn:hover {
+  background-color: #d3d3d3; /* Replace with the actual color value */
+}
+
+.disabled-btn {
+  background-color: #d3d3d3; /* Replace with the actual color value */
+  border: 1px solid #d3d3d3 !important; /* Replace with the actual color value */
+  color: #a9a9a9; /* Replace with the actual color value */
+  cursor: not-allowed !important;
+}
+
+.left-align-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.right-align-icon {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.loading-button {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

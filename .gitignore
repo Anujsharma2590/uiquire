@@ -6,3 +6,4 @@ lib
 config.json
 eks_cicd/
 storybook-static/
+*storybook.log
